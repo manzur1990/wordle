@@ -6,8 +6,9 @@
 │   └── manifest.json
 └── src
     ├── components
-        ├──
-        └──
+        ├── Baord.js
+        ├── Keyboard.js
+        └── Letter.js
     ├── App.css
     ├── App.js
     ├── index.js
