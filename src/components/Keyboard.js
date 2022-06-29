@@ -1,5 +1,5 @@
 import React from 'react';
-import Key from '../components/Key';
+import Key from './Key';
 
 function Keyboard() {
     const keys1 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
