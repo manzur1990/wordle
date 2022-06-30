@@ -2,7 +2,7 @@ import './App.css';
 import Board from './components/Board';
 import { boardDefualt } from './Words';
 import Keyboard from './components/Keyboard';
-import { useState, createContext } from 'react';
+import { useState, useEffect, createContext } from 'react';
 
 export const AppContext = createContext();
 
@@ -13,12 +13,27 @@ function App() {
         attempt: 0,
         letterPos: 0,
     });
+    const [wordSet, setWordSet] = useState(new Set());
+    const [correctWord, setCorrectWord] = useState('');
+    const [disbledLetter, setDisabledLetter] = useState([]);
+    const [gameOver, setGameOver] = useState({
+        gameOver: false,
+        guessWord: false,
+    });
 
+    // Generator
+    useEffect(() => {
+        generateWordSet().then((words) => {
+            setWordSet(words.wordSet);
+            setCorrectWord(words.todaysWord);
+        });
+    }, []);
     // Handler Functions
     const onEnter = () => {
-        return;
-    };
+        if (currentAttempt.letter !== 5) return;
 
+        let currWord;
+    };
     return (
         <div className='App'>
             <nav>
