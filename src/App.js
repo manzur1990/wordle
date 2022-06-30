@@ -7,11 +7,18 @@ import { useState, createContext } from 'react';
 export const AppContext = createContext();
 
 function App() {
+    // State
     const [board, setBoard] = useState(boardDefualt);
     const [currentAttempt, setCurrentAttempt] = useState({
         attempt: 0,
         letterPos: 0,
     });
+
+    // Handler Functions
+    const onEnter = () => {
+        return;
+    };
+
     return (
         <div className='App'>
             <nav>
