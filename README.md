@@ -13,8 +13,9 @@
 │   ├── index.html
 │   └── manifest.json
 └── src
-    ├── ├── components
+    ├── components
     │    ├── Baord.js
+    │    ├── Key.js
     │    ├── Keyboard.js
     │    └── Letter.js
     ├── App.css
