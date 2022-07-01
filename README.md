@@ -15,6 +15,7 @@
 └── src
     ├── components
     │    ├── Baord.js
+    │      ├── GameOver.js
     │    ├── Key.js
     │    ├── Keyboard.js
     │    └── Letter.js
